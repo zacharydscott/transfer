@@ -1,0 +1,22 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="app" style="text-align:center" *ngIf="loaded === true">
+  <h4>{{ thread.title }}</h4>
+  <mat-list>
+    <ng-template ngFor let-post [ngForOf]="posts" let-i="index">
+      <div class="post">
+        <div class="post-header">
+          <span class="post-id">post id: {{ post.id }}</span>
+          <span class="post-date">submitted: {{ post.date }}</span>
+        </div>
+        <div class="post-body">
+          <div class="profile">{{ post.username }}</div>
+          <div class="content">{{ post.message }}</div>
+        </div>
+      </div>
+
+      <mat-divider *ngIf="i < posts.length - 1"></mat-divider>
+    </ng-template>
+  </mat-list>
+  <router-outlet></router-outlet>
+</div>
+<mat-spinner *ngIf="loaded === 'fuck'"></mat-spinner>

@@ -1,0 +1,39 @@
+.mat-list {
+  width: 90%;
+  margin: auto;
+}
+.post {
+  width: 100%;
+  margin: 1em;
+  .post-header {
+    font-size: 0.7em;
+    overflow: hidden;
+    height: 1.5em;
+    .post-id {
+      position: absolute;
+      left: 4em;
+    }
+    .post-date {
+      position: absolute;
+      right: 5em;
+    }
+  }
+  .post-body {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    margin: 0.5em;
+    .profile {
+      justify-self: center;
+      vertical-align: middle;
+      align-items: center;
+      align-self: center;
+    }
+    .content {
+      justify-self: left;
+      text-align: left;
+      text-indent: 2em;
+      margin-left: 3em;
+      overflow: hidden;
+    }
+  }
+}
